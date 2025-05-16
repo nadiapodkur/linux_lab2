@@ -84,7 +84,7 @@ echo "Top 10 hosts by referrer count from '$LOG_FILE':"
 echo "$top_10_data" | awk -v total_sum="$total_referrers_for_top_10" '
 BEGIN { rank = 1 }
 {
-    count = $1;s
+    count = $1;
     host = $2; 
     percentage = (count / total_sum) * 100;
     printf "%d. %s - %d - %.0f%%\n", rank, host, count, percentage;
